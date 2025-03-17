@@ -8,14 +8,16 @@ router = APIRouter(
     responses={404: {"message": "Not found"}}
 )
 
+location_service = LocationService()
+
 @router.get("/province")
 async def get_all():
-    return LocationService().province()
+    return location_service.province()
 
 @router.get("/country")
 async def get_all():
-    return LocationService().country()
+    return location_service.country()
 
 @router.get("/country/search")
 async def get_all():
-    return LocationService().country()
+    return location_service.country()
